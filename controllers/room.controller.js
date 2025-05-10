@@ -265,7 +265,7 @@ exports.handleRoomImageUpload = async (req, res) => {
     }
     
     // Формируем URL изображения (с учетом публичного пути)
-    const imageUrl = `/uploads/${req.file.filename}`;
+    const imageUrl = `http://localhost:5001/uploads/${req.file.filename}`;
     
     // Создаем запись об изображении в базе данных
     const roomImage = await RoomImage.create({
